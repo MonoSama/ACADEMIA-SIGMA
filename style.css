@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     box-sizing: border-box;
@@ -6,28 +8,55 @@
     padding: 0;
     font-size: 20px;
     font-family: "Nunito Sans", sans-serif;
+    list-style: none;
 }
 
 body{
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(255, 255, 255);
 }
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 
 .header{
-    background-color: rgb(32, 32, 32);
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 10vh;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    height: 80px;
-    padding: 5px 10%;
+    background-color: rgb(32, 32, 32);
     position: sticky;
     top: 0px;
     z-index: 2;
+   
 }
 
-.header .logo{
-    margin-right: auto;
-    cursor: pointer;
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    
+}
+
+
+.logo{
+    font-size: 24px;
+    color: #CF2D3A;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .header .logo img{
@@ -40,24 +69,69 @@ body{
     transform: scale(1.1);
 }
 
-
-.header .nav_links li{
-    list-style: none;
-    display: inline-block;
-    padding: 5px 20px;
-
+.menu .navbar ul li{
+    position: relative;
+    float: left;
 }
 
-.header .nav_links a{
-    display: inline-block;
+.menu .navbar ul li a{
+   
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
     text-decoration: none;
-    color: white;
     transition: all 0.3s;
+
 }
 
-.header .nav_links a:hover{
-    color: rgb(246, 79, 79);
-    transform: scale(1.2);
+.menu .navbar ul li a:hover{
+    color: #CF2D3A;
+ 
+    
+}
+
+
+
+#menu{
+    display: none;
+
+}
+
+.menu-icono{
+    width: 25px;
+
+}
+
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-txt{
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.header-txt h1, span, h3{
+    font-size: 110px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", cursive;
+    color: #CF2D3A;
+    margin-bottom: 15px;
+
+}
+
+
+.header-txt span{
+    font-size: 25px;
+}
+
+.header-txt p{
+    color: #AFAFAF;
+    padding: 0 250px;
+    margin: 25px 0;
 }
 
 .header .btn button{
@@ -77,6 +151,22 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container-carousel {
     position: relative;
     width: 100%;
@@ -93,7 +183,7 @@ body{
 
 .slider-section {
     width: calc(100% / 10);
-    height: 100%;
+    height: auto;
 }
 
 .slider-section img {
@@ -120,18 +210,24 @@ body{
     user-select: none;
 }
 
+/* EFECTO HOVER EN BOTONES DERECHA E IZQUIERDA
 .btn-left:hover,
 .btn-right:hover {
     background-color: #333333d4;
     color: #fff;
 }
+*/
 
 .btn-left {
     left: 10px;
+    background-color: #333333d4;
+    color: #fff;
 }
 
 .btn-right {
     right: 10px;
+    background-color: #333333d4;
+    color: #fff;
 }
 
 
@@ -154,7 +250,8 @@ body{
     background-color: #191919;
 }
 
-h2{
+
+.welcome-2 h2{
     font-size: 90px;
     line-height: 100px;
     color: #FFFFFF;
@@ -163,8 +260,10 @@ h2{
     margin-bottom: 20px;
 }
 
+
+
 p{
-    font-size: 16px;
+
     color: #AFAFAF;
     margin: 25px 0;
 }
@@ -185,7 +284,488 @@ p{
     width: 80px;
 }
 
+
+
+
+
+/*SECTION DE MAS INFO*/
+
+/* Estilos generales para la sección */
+.info_adi {
+    background-color: rgb(244, 218, 223); /* Fondo suave */
+    padding: 20px;
+   
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenedor_1 {
+
+    max-width: 500px;
+    padding: 20px;
+}
+
+.contenedor_1 h2 {
+    font-size: 60px;
+    color: #000000; /* Color de texto oscuro */
+    margin-bottom: 20px;
+    font-family: "Bebas Neue", cursive;
+}
+
+.contenedor_1 p {
+    font-size: 26px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.contenedor_2 {
+
+    max-width: 500px;
+    padding: 20px;
+}
+
+.contenedor_2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0);
+}
+
+
+
+/*SECTION CACHIMBOS*/
+
+.cachimbos{
+    background-color: rgb(255, 255, 255);
+    height: 550px;
+
+}
+
+.cachimbos p{
+    padding: 20px;
+    text-align: center;
+    font-size: 60px;
+    color: #000000;
+    margin: 0;
+    font-family: "Bebas Neue", cursive;
+}
+
+
+.cachimbos_fotos{
+
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+
+    height: 400px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: auto;
+    
+}
+
+
+.cachimbo{
+
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 300px;
+    height: 320px;
+   
+}
+
+
+.cachimbo img{
+    border-radius: 20px;
+    width: 280px;
+    height: 300px;
+}
+
+/*SECTION NOTICIAS*/
+
+
+
+.proximos_eventos h2{
+    background-color:  rgb(32, 32, 32);
+    font-family: "Bebas Neue", cursive;
+    padding: 5px;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+
+.noticias {
+    position: relative;
+    background-image: url("asset/noticias_banner.jpg");
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 0;
+
+}
+
+.noticias::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.card {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 350px; /* Ajusta el tamaño de la tarjeta */
+    height: 600px; /* Ajusta el tamaño de la tarjeta */
+    z-index: 1;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-img {
+    width: 100%;
+    height: 60%; /* Ajusta la altura de la imagen */
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.noticias .btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+
+}
+
+.noticias .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+
+/*ESTILOS FORMULARIO*/
+
+.formulario {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+
+    color: #333;
+
+    font-family: "Bebas Neue", cursive;
+
+
+    font-size: 60px;
+
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.formulario input,
+.formulario select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Contenedor para los campos que estarán en una misma fila */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Ajuste del tamaño de los campos dentro de las filas */
+.form-group {
+    flex: 1;
+}
+
+.formulario .btn {
+    display: block;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.formulario .btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/* General footer styles */
+.footer {
+    background-color: #333;
+    color: white;
+
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+  }
+  
+  /* Footer about section */
+  .footer-about {
+    width: 300px;
+    margin: 20px 10px;
+  }
+
+  .footer-about h2{
+    padding: 10px 0 10px;
+  }
+
+  .footer-about img{
+    filter: drop-shadow(1px 1px 1px rgb(255, 255, 255));
+  }
+
+  
+
+  
+  
+  .footer-about p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .social-icons{
+    display: flex;
+    justify-content: space-around;
+  }
+  .social-icons img {
+    width: 50px;
+    transition: all 0.3s;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.2);
+ }
+
+  
+  /* Footer useful links section */
+  .footer-links {
+    width: 200px;
+    margin: 20px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+
+
+  
+  
+  .footer-links ul li a:hover {
+    color: #007bff;
+  }
+  
+  /* Footer contact section */
+  .footer-contact {
+    width: 300px;
+    margin: 20px;
+  }
+  
+  .footer-contact ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-contact ul li {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+
+  
+  
+  /* Footer bottom section */
+  .footer-bottom {
+    background-color: #222;
+    padding: 20px 0;
+    margin-top: 40px;
+    color: #aaa;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Responsive footer */
+  @media (max-width: 768px) {
+
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
 @media (max-width: 991px) {
+
+    .menu{
+        padding: 20px 20px 0px;
+    }
+    
+    .menu label{
+        display: initial;
+    }
+
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1F1F1F;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header{
+        min-height: 13vh;
+    }
+
+    .header-content{
+        padding: 80px 30px 50px 30px;
+    }
+
+    .header-txt{
+        margin-bottom: 15px;
+    }
+
+    .header-txt h1{
+        font-size: 90px;
+    }
+
+    .header-txt p{
+        padding: 0;
+        margin: 15px 0;
+    }
+
+    .header-dir{
+        flex-direction: column;
+    }
+
+    .dir p{
+        font-size: 18px;
+    }
+
+
+
     .welcome{
         flex-direction: column;
     }
@@ -199,4 +779,50 @@ p{
         padding: 30px;
         text-align: center;
     } 
+
+    .welcome-2 h2{
+        font-size: 50px;
+    } 
+
+    .contenedor_1 h2 {
+        font-size: 50px;
+
+    }
+    
+    .contenedor_1 p {
+        font-size: 16px;
+
+    }
+
+    .cachimbos p {
+        font-size: 50px;
+
+    }
+    
+    .noticias{
+        background-size: cover;
+        background-position: center;
+    }
+
+    .proximos_eventos h2{
+
+        font-size: 50px;
+   
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: left;
+        padding: 20px;
+      }
+    
+      .footer-about, .footer-links, .footer-contact, .footer-social {
+        width: 100%;
+
+      }
+
+
 }
+
+
+
